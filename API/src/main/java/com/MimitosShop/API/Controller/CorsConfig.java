@@ -20,11 +20,8 @@ public class CorsConfig {
 
         // Permitir todos los headers y métodos que necesites
         config.addAllowedHeader("*");
-        config.addAllowedMethod("OPTIONS");
-        config.addAllowedMethod("GET");
-        config.addAllowedMethod("POST");
-        config.addAllowedMethod("PUT");
-        config.addAllowedMethod("DELETE");
+        config.addAllowedMethod("*"); // Permitir todos los métodos HTTP
+        config.setAllowCredentials(true); // Permitir credenciales si es necesario
 
         // Registrar la configuración global para todas las rutas
         source.registerCorsConfiguration("/**", config);
