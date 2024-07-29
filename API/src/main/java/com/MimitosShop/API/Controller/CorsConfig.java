@@ -16,7 +16,7 @@ public class CorsConfig {
 
         // Permitir todos los orígenes necesarios para desarrollo y despliegue
         config.addAllowedOrigin("http://localhost");
-        config.addAllowedOrigin("http://127.0.0.1:5500"); // Agregar el origen de tu frontend
+        config.addAllowedOrigin("*"); // Agregar el origen de tu frontend
         // config.addAllowedOrigin("*"); // Permitir todos los orígenes (opcional, para pruebas). Úsalo con precaución.
 
         // Permitir todos los headers y métodos que necesites
