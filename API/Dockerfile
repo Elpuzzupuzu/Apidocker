@@ -2,7 +2,7 @@
 FROM amazoncorretto:21-alpine-jdk
 
 # Copia el archivo JAR construido en el contenedor
-COPY ./target/GatorGate-0.0.1-SNAPSHOT.jar /app.jar
+COPY ./target/GatorGate-0.0.1-SNAPSHOT.jar app.jar
 
 COPY ./pom.xml /app.jar
 
