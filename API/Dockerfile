@@ -2,9 +2,19 @@
 FROM amazoncorretto:21-alpine-jdk
 
 # Copia el archivo JAR construido en el contenedor
-COPY API/target/GatorGate-0.0.1-SNAPSHOT.jar /app.jar
+COPY ./target/GatorGate-0.0.1-SNAPSHOT.jar /app.jar
 
-COPY API/pom.xml /app.jar
+COPY ./pom.xml /app.jar
+
+COPY ./.mvn /app.jar/.mvn
+
+COPY ./mvnw.cmd /app-jar
+
+
+#descargar dependencias
+RUN ./mvnw dependency:go-offline
+
+RUN ./mvnw clean install -DskipTests
 
 
 
