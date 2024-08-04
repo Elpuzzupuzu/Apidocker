@@ -6,7 +6,6 @@ COPY API/target/GatorGate-0.0.1-SNAPSHOT.jar /app.jar
 
 COPY API/pom.xml /app.jar
 
-COPY
 
 
 # Expone el puerto que usa tu aplicación (por defecto, Spring Boot usa el puerto 8080)
